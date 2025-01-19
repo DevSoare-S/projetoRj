@@ -1,0 +1,36 @@
+.header {
+    width: 1920px;
+    height: 70px;
+    display: flex;
+    background-color: rgba(14, 12, 12, 0.5);
+    position: fixed;
+}
+
+.header .img {
+    margin-top: 5px;
+    width: 500px;
+    height: 70px;
+}
+
+.header .nav {
+    height: 70px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+
+.header .nav a {
+    color:#e1c600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header .nav a:hover {
+    text-decoration: underline;
+}
+
+.header .mobile {
+    display: none;
+}
