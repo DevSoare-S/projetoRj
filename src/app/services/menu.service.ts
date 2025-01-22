@@ -12,12 +12,17 @@ export class MenuService {
     const menu: Array<Menu> = [
     {
       name: 'Inicio',
-      url: '#Banner'
+      url: '#banner'
+    },
+
+    {
+      name: 'Diferenciais',
+      url: '#diferenca'
     },
 
     {
       name: 'Sobre Mim',
-      url: '#Sobre'
+      url: '#sobre'
     },
 
     {
@@ -27,9 +32,9 @@ export class MenuService {
 
     {
       name: 'Serviços',
-      url: 'servicos'
+      url: '#servicos'
     }
-  ];
+    ];
 
     return menu;
   }
