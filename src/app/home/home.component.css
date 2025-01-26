@@ -40,12 +40,16 @@
 
 /* features */
 
+
+
 .features {
     padding: 5rem 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     background-color: #f5f5f5;
+    height: 100vh;
+    align-items: center;
 }
 
 .features .feature {
@@ -55,6 +59,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    height: 30vh;
 }
 
 .features .feature span {
@@ -72,3 +77,177 @@
     color: #1a237e;
 }
 
+/* Section styles */
+.sectionSobre {
+  padding: 5rem 0;
+}
+
+.section-gray {
+  background-color: rgb(243, 244, 246);
+}
+
+.sectionSobre-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* History section */
+
+.history {
+  max-width: 56rem;
+  margin: 0 auto;
+  height: 70vh;
+  padding-top: 9rem;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.history-image {
+  width: 100%;
+  max-height: 300px; 
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.history-text {
+  color: rgb(75, 85, 99);
+  line-height: 1.625;
+}
+
+.history-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* galeria */
+
+.containerGaleria {
+  min-height: 100vh;
+  padding-top: 9rem; /* Ajuste para evitar sobreposição com o menu */
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: white;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  height: 16rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.nav-button.prev {
+  left: 0.5rem;
+}
+
+.nav-button.next {
+  right: 0.5rem;
+}
+
+.gallery-content {
+  padding: 1rem;
+}
+
+.gallery-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.dot.active {
+  background-color: #3b82f6;
+}
+
+@media (min-width: 768px) {
+  .history-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-container {
+    height: auto; /* Altura automática para manter a proporção */
+    aspect-ratio: 4 / 3; /* Define uma proporção para as imagens (4:3) */
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 3; /* Mantém a proporção da imagem */
+  }
+
+  .gallery-item {
+    margin-bottom: 1rem; /* Adiciona espaçamento entre as seções */
+  }
+  
+}

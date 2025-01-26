@@ -5,8 +5,16 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between; /* Alinha a logo à esquerda e o menu à direita */
     height: 70px;
+    padding: 0 20px; /* Adiciona um pouco de padding nas laterais */
+    z-index: 1000;
+}
+
+.logo {
+    padding-top: 20px;
+    height: 90px; /* Ajuste o tamanho da logo conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
 }
 
 nav ul {
@@ -17,29 +25,25 @@ nav ul {
     list-style: none;
     position: absolute;
     top: 70px;
-    background:  #fff;
+    background: #fff;
     width: 100%;
 }
 
 nav ul.open {
     display: flex;
-
 }
 
 nav ul.closed {
     display: none;
-
 }
 
 nav ul li {
     padding: 20px;
-
 }
 
 nav ul li a {
     font-size: var(--font-size-5);
 }
-
 
 nav ul li a:hover {
     color: var(--color-blue-2);
@@ -52,9 +56,9 @@ nav span {
 }
 
 @media (min-width: 768px) {
-    
     nav {
-        justify-content: center;
+        justify-content: space-between; /* Mantém a logo à esquerda e o menu no centro */
+        padding: 0 40px; /* Aumenta o padding em telas maiores */
     }
 
     nav ul.open,
@@ -66,6 +70,6 @@ nav span {
     }
 
     nav span {
-        Display: none;
+        display: none; /* Esconde o ícone de menu em telas maiores */
     }
 }

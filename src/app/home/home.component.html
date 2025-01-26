@@ -12,7 +12,7 @@
         </div>
 
         <div class="container-orcamento">
-            <a href="">Solicitar Orçamento</a>
+            <a href="https://api.whatsapp.com/send?phone=5196208010&text=Desejo%20saber%20mais%20informa%C3%A7%C3%B5es." target="_blank">Solicitar Orçamento</a>
         </div>
     </div>
 </section>
@@ -40,3 +40,84 @@
         <p>Resposta em até 24 horas úteis</p>
       </div>
  </section>
+
+ <section id="sobre" class="sectionSobre">
+    <div class="containerSobre">
+      <div class="history">
+        <h2 class="sectionSobre-title">Nossa História</h2>
+        <div class="history-grid">
+          <div>
+            <img 
+              src="Historia.jpg" 
+              alt="Nossa equipe" 
+              class="history-image"
+            />
+          </div>
+          <div class="history-text">
+            <p>
+              Desde nossa fundação, temos nos dedicado a entregar excelência em cada projeto. 
+              Nossa jornada começou com um sonho de transformar o mercado, trazendo inovação e 
+              qualidade para nossos clientes.
+            </p>
+            <p>
+              Hoje, somos reconhecidos como líderes em nosso segmento, graças ao compromisso 
+              com a qualidade e à dedicação de nossa equipe excepcional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catálogo">
+    <div class="containerGaleria">
+      <h1 class="title">Nosso Catálogo</h1>
+    
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <div class="image-container">
+            <img [src]="cubas[indiceCubaAtual].imagem" alt="Cuba" class="gallery-image">
+            <button class="nav-button prev" (click)="trocarImagemCuba(-1)">&lt;</button>
+            <button class="nav-button next" (click)="trocarImagemCuba(1)">&gt;</button>
+          </div>
+          <div class="gallery-content">
+            <h2 class="gallery-title">Lavatórios</h2>
+            <div class="dots-container">
+              <div *ngFor="let item of cubas; let i = index" class="dot" [class.active]="i === indiceCubaAtual"></div>
+            </div>
+          </div>
+        </div>
+    
+        
+        <div class="gallery-item">
+          <div class="image-container">
+            <img [src]="pias[indicePiaAtual].imagem" alt="Pia" class="gallery-image">
+            <button class="nav-button prev" (click)="trocarImagemPia(-1)">&lt;</button>
+            <button class="nav-button next" (click)="trocarImagemPia(1)">&gt;</button>
+          </div>
+          <div class="gallery-content">
+            <h2 class="gallery-title">Cozinhas</h2>
+            <div class="dots-container">
+              <div *ngFor="let item of pias; let i = index" class="dot" [class.active]="i === indicePiaAtual"></div>
+            </div>
+          </div>
+        </div>
+    
+        
+        <div class="gallery-item">
+          <div class="image-container">
+            <img [src]="nichos[indiceNichoAtual].imagem" alt="Revestimento" class="gallery-image">
+            <button class="nav-button prev" (click)="trocarImagemNicho(-1)">&lt;</button>
+            <button class="nav-button next" (click)="trocarImagemNicho(1)">&gt;</button>
+          </div>
+          <div class="gallery-content">
+            <h2 class="gallery-title">Nichos</h2>
+            <div class="dots-container">
+              <div *ngFor="let item of nichos; let i = index" class="dot" [class.active]="i === indiceNichoAtual"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
