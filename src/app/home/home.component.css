@@ -232,6 +232,8 @@
   background-color: #3b82f6;
 }
 
+
+
 @media (min-width: 768px) {
   .history-grid {
     grid-template-columns: 1fr 1fr;
@@ -250,4 +252,165 @@
     margin-bottom: 1rem; /* Adiciona espaçamento entre as seções */
   }
   
+}
+
+/* Serviços */ 
+
+.benefits {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.process-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.process-card h3 {
+  color: #27277e;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.process-content {
+  flex-grow: 1;
+}
+
+.process-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.process-content li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+}
+
+.process-content li:before {
+  content: "•";
+  color: #27277e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.benefits-list {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits-list h3 {
+  color: #27277e;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.benefits-content {
+  flex-grow: 1;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.benefit-item i {
+  font-size: 1.5em;
+  color: #27277e;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.benefit-item h4 {
+  color: #333;
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+}
+
+.benefit-item p {
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+}
+
+.contact-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+  color: white;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .benefits h2 {
+      font-size: 2em;
+  }
+
+  .process-card h3,
+  .benefits-list h3 {
+      font-size: 1.5em;
+  }
 }

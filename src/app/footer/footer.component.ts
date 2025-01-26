@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  email: string = 'rj@porcelanatos.com.br'
+  email: string = 'Rodrigo.-tdai@hotmail.com'
 }
