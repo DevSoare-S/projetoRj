@@ -59,7 +59,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    height: 30vh;
+    height: 320px;
 }
 
 .features .feature span {
@@ -95,23 +95,22 @@
 
 /* History section */
 
+/* Ajustes para a seção "Nossa História" */
 .history {
-  max-width: 56rem;
-  margin: 0 auto;
-  height: 70vh;
-  padding-top: 9rem;
+  max-width: 70%; /* Limita a largura máxima */
+  padding: 2rem 1rem; /* Adiciona padding lateral */
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .history-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  gap: 1.5rem;
   align-items: center;
 }
-
 .history-image {
   width: 100%;
-  max-height: 300px; 
+  max-height: 400px;
   object-fit: cover;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -119,11 +118,43 @@
 
 .history-text {
   color: rgb(75, 85, 99);
-  line-height: 1.625;
+  line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+  padding: 0 1rem; /* Adiciona padding lateral ao texto */
 }
 
 .history-text p {
   margin-bottom: 1.5rem;
+  font-size: 1rem; /* Tamanho de fonte padrão */
+}
+
+@media (min-width: 768px) {
+  .history-grid {
+    grid-template-columns: 1fr 1fr; /* Duas colunas em telas maiores */
+  }
+}
+
+/* Ajustes para telas menores (400px) */
+@media (max-width: 400px) {
+  .history {
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .history-grid {
+    gap: 1.5rem; /* Reduz o espaçamento entre a imagem e o texto */
+  }
+
+  .history-image {
+    max-height: 200px; /* Reduz a altura da imagem */
+  }
+
+  .history-text {
+    padding: 0 0.5rem; /* Reduz o padding lateral */
+  }
+
+  .history-text p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    margin-bottom: 1rem; /* Reduz o espaçamento entre parágrafos */
+  }
 }
 
 /* galeria */
@@ -233,26 +264,6 @@
 }
 
 
-
-@media (min-width: 768px) {
-  .history-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .image-container {
-    height: auto; /* Altura automática para manter a proporção */
-    aspect-ratio: 4 / 3; /* Define uma proporção para as imagens (4:3) */
-  }
-
-  .gallery-image {
-    aspect-ratio: 4 / 3; /* Mantém a proporção da imagem */
-  }
-
-  .gallery-item {
-    margin-bottom: 1rem; /* Adiciona espaçamento entre as seções */
-  }
-  
-}
 
 /* Serviços */ 
 
@@ -412,5 +423,305 @@
   .process-card h3,
   .benefits-list h3 {
       font-size: 1.5em;
+  }
+}
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 400px) {
+  .container-box {
+    padding: 0; /* Reduz o padding lateral */
+  }
+
+  .container-box .container .container-title h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .container-box .container .container-paragrafo p {
+    font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  }
+
+  .container-box .container .container-orcamento a {
+    padding: 0.75rem 1.5rem; /* Reduz o padding do botão */
+    font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+  }
+
+  .features {
+    padding: 2rem 1rem; /* Reduz o padding */
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    gap: 1rem; /* Reduz o espaçamento entre os itens */
+    height: auto; /* Remove altura fixa */
+  }
+  
+  .features .feature {
+    padding: 1rem; /* Reduz o padding */
+    height: auto; /* Remove altura fixa */
+  }
+
+  .features .feature span {
+    font-size: 24px; /* Reduz o tamanho do ícone */
+  }
+
+  .features h3 {
+    font-size: 1.25rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .history {
+    padding-top: 4rem; /* Reduz o padding superior */
+    height: auto; /* Remove altura fixa */
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr; /* Muda para uma coluna */
+    gap: 1.5rem; /* Reduz o espaçamento */
+  }
+
+  .history-image {
+    max-height: 200px; /* Reduz a altura da imagem */
+  }
+
+  .history-text p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do texto */
+  }
+
+  .containerGaleria {
+    padding-top: 4rem; /* Reduz o padding superior */
+    padding-left: 1rem; /* Reduz o padding lateral */
+    padding-right: 1rem;
+  }
+
+  .title {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título */
+    margin-bottom: 1.5rem; /* Reduz o espaçamento */
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    gap: 1rem; /* Reduz o espaçamento */
+  }
+  
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr); /* Três colunas em telas maiores */
+    }
+  }
+
+  .image-container {
+    height: 12rem; /* Reduz a altura do contêiner da imagem */
+  }
+
+  .gallery-title {
+    font-size: 1.25rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .benefits {
+    padding: 2rem 1rem; /* Reduz o padding */
+  }
+
+  .benefits h2 {
+    font-size: 1.75rem; /* Reduz o tamanho da fonte do título */
+    margin-bottom: 2rem; /* Reduz o espaçamento */
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Muda para uma coluna */
+    gap: 1.5rem; /* Reduz o espaçamento */
+  }
+
+  .process-card,
+  .benefits-list {
+    padding: 1.5rem; /* Reduz o padding */
+  }
+
+  .process-card h3,
+  .benefits-list h3 {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .benefit-item {
+    margin-bottom: 1rem; /* Reduz o espaçamento */
+  }
+
+  .benefit-item h4 {
+    font-size: 1.1rem; /* Reduz o tamanho da fonte */
+  }
+
+  .benefit-item p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  }
+
+  .contact-link {
+    padding: 0.75rem 1rem; /* Reduz o padding */
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
+  }
+}
+
+@media (max-width: 400px) {
+  .container-box {
+    padding: 0 1rem; /* Reduz o padding lateral */
+  }
+
+  .container-box .container .container-title h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .container-box .container .container-paragrafo p {
+    font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  }
+
+  .container-box .container .container-orcamento a {
+    padding: 0.75rem 1.5rem; /* Reduz o padding do botão */
+    font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+  }
+
+  .features {
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .history {
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .history-text p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  }
+
+  .gallery-grid {
+    gap: 1rem; /* Reduz o espaçamento */
+  }
+
+  .image-container {
+    height: 12rem; /* Reduz a altura do contêiner da imagem */
+  }
+
+  .gallery-title {
+    font-size: 1.25rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .benefits {
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .benefits h2 {
+    font-size: 1.75rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+
+  .process-card,
+  .benefits-list {
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .contact-link {
+    padding: 0.75rem 1rem; /* Reduz o padding */
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Ajustes para Safari no iPhone */
+@supports (-webkit-touch-callout: none) {
+  .container-box {
+    height: -webkit-fill-available; /* Corrige altura em iPhones */
+  }
+}
+
+@media (max-width: 600px) {
+
+  .containerGaleria {
+    padding-top: 0;
+  }
+
+  .container-box .container .container-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .container-box .container .container-paragrafo p {
+    font-size: 1rem;
+  }
+
+  .features {
+    padding: 2rem 5%;
+    height: 160vh;
+  }
+
+  .history {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+
+
+  .container-box .container .container-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .container-box .container .container-paragrafo p {
+    font-size: 1rem;
+  }
+
+  .features {
+    padding: 2rem 5%;
+    height: 130vh;
+  }
+
+  .history {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-box {
+    padding: 0 2%;
+  }
+
+  .container-box .container .container-title h1 {
+    font-size: 2rem;
+  }
+
+  .container-box .container .container-paragrafo p {
+    font-size: 0.9rem;
+  }
+
+  .features .feature span {
+    font-size: 2rem;
+  }
+
+  .history-image {
+    max-height: 200px;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+
+  .image-container {
+    height: 150px;
   }
 }

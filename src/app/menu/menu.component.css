@@ -18,16 +18,15 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Uma coluna em telas pequenas */
     align-items: center;
     justify-content: center;
-    list-style: none;
     position: absolute;
     top: 70px;
     background: #fff;
     width: 100%;
-}
+    list-style: none;
+  }
 
 nav ul.open {
     display: flex;
@@ -60,6 +59,12 @@ nav span {
         justify-content: space-between; /* Mantém a logo à esquerda e o menu no centro */
         padding: 0 40px; /* Aumenta o padding em telas maiores */
     }
+
+    nav ul {
+        flex-direction: row; /* Layout em linha em telas maiores */
+        position: relative;
+        top: 0;
+      }
 
     nav ul.open,
     nav ul.closed {
